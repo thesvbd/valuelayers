@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 p-4 md:p-6">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-semibold text-blue-600">ValueLayers</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/index.html#tools" class="text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-800">Compound Interest Calculator</h1>
+
+    <div class="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto">
+        <div class="calculator bg-white rounded-lg shadow-md p-4 md:p-6 lg:w-1/3">
+            <form id="compoundInterestCalculator" class="space-y-4">
+                <div>
+                    <label for="initialInvestment" class="block text-sm font-medium text-gray-700">Initial Investment:</label>
+                    <input type="number" id="initialInvestment" value="10000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="monthlyContribution" class="block text-sm font-medium text-gray-700">Monthly Contribution:</label>
+                    <input type="number" id="monthlyContribution" value="1000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="adjustForInflation" class="mr-2">
+                    <label for="adjustForInflation" class="text-sm font-medium text-gray-700">
+                        Annually increase monthly contribution by inflation
+                    </label>
+                </div>
+                <p class="text-xs text-gray-500 mt-1 ml-6">
+                    Increases the monthly contribution by inflation at the beginning of each year (except the first).
+                </p>
+                <div>
+                    <label for="annualReturn" class="block text-sm font-medium text-gray-700">Annual Return (%):</label>
+                    <input type="number" id="annualReturn" step="0.1" value="7" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="years" class="block text-sm font-medium text-gray-700">Number of Years:</label>
+                    <input type="number" id="years" value="10" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="inflationRate" class="block text-sm font-medium text-gray-700">Annual Inflation Rate (%):</label>
+                    <input type="number" id="inflationRate" step="0.1" value="3" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate</button>
+            </form>
+        </div>
+
+        <div class="result-container bg-white rounded-lg shadow-md p-4 md:p-6 lg:w-2/3 flex flex-col">
+            <div id="result" class="text-xs md:text-sm text-gray-800 mb-4"></div>
+            <div id="explanation" class="text-xs md:text-sm text-gray-600 mt-2 mb-4"></div>
+            <div class="flex-grow relative">
+                <canvas id="investmentChart" class="w-full h-full"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/compoundInterestCalculator.js"></script>
+</body>
+</html>

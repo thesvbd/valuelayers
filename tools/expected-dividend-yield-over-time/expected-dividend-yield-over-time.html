@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expected Dividend Yield Over Time</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-6">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-semibold text-blue-600">ValueLayers</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/index.html#tools" class="text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-center">Expected Dividend Yield Over Time</h1>
+        <form id="calculator-form" class="bg-white p-6 rounded shadow-md max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="stock-price" class="block text-gray-700">Stock Price</label>
+                <input type="number" id="stock-price" step="0.01" class="mt-1 block w-full" required value="100">
+            </div>
+            <div class="mb-4">
+                <label for="annual-dividend" class="block text-gray-700">Annual Dividend</label>
+                <input type="number" id="annual-dividend" step="0.01" class="mt-1 block w-full" required value="5">
+            </div>
+            <div class="mb-4">
+                <label for="dividend-growth" class="block text-gray-700">Year-over-Year Dividend Growth (%)</label>
+                <input type="number" id="dividend-growth" step="0.01" class="mt-1 block w-full" required value="3">
+            </div>
+            <div class="mb-4">
+                <label for="years" class="block text-gray-700">Number of Years</label>
+                <input type="number" id="years" step="1" class="mt-1 block w-full" required value="10">
+            </div>
+            <div class="mb-4">
+                <label for="dividend-tax" class="block text-gray-700">Dividend Tax (%) (optional)</label>
+                <input type="number" id="dividend-tax" step="0.01" class="mt-1 block w-full">
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" id="show-payback-period" class="mr-2">
+                <label for="show-payback-period" class="text-gray-700">Show Investment Payback Period</label>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Calculate</button>
+        </form>
+        <div id="results" class="mt-6">
+            <div class="flex flex-wrap justify-center">
+                <div class="table-container w-full md:w-1/2">
+                    <table id="results-table" class="min-w-full bg-white hidden mx-2 border border-gray-200 text-sm">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th colspan="4" class="text-xl font-semibold mb-2 text-center">Results</th>
+                            </tr>
+                            <tr>
+                                <th class="py-1 px-2 border-b border-gray-200">Year</th>
+                                <th class="py-1 px-2 border-b border-gray-200">Dividend (USD) Before Tax</th>
+                                <th id="after-tax-header" class="py-1 px-2 border-b border-gray-200 hidden">Dividend (USD) After Tax</th>
+                                <th class="py-1 px-2 border-b border-gray-200">Dividend Yield (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- table rows -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="payback-period-result" class="w-full md:w-1/2 mt-4 md:mt-0 p-4 bg-white rounded shadow-md hidden">
+                    <h2 class="text-xl font-semibold mb-2">Investment Payback Period</h2>
+                    <p id="payback-period-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

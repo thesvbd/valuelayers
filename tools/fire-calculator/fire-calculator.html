@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.I.R.E. Calculators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-semibold text-blue-600">ValueLayers</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/index.html#tools" class="text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">F.I.R.E. Calculators</h1>
+
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-bold mb-4 text-indigo-700">What is F.I.R.E.?</h2>
+        <p class="text-gray-700 mb-4">
+            F.I.R.E. (Financial Independence, Retire Early) is a financial strategy and lifestyle focused on achieving financial independence and the possibility of early retirement. The basic principles are:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Maximizing savings (often 50-70% of income)</li>
+            <li>Minimizing expenses</li>
+            <li>Aggressive investing in a diversified portfolio</li>
+            <li>Creating passive income</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2 text-indigo-600">The 4% Rule</h3>
+        <p class="text-gray-700 mb-4">
+            The 4% rule is a commonly used estimate in the FIRE community. It assumes that you can safely withdraw 4% of your investment portfolio each year without depleting your savings during retirement. This means that to achieve financial independence, you need to accumulate 25 times your annual expenses. However, this percentage can be adjusted according to individual needs and risk tolerance.
+        </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-6">
+        <div class="calculator-container flex-1">
+            <div class="calculator bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-2 text-indigo-700">Financial Independence Age</h2>
+                <p class="text-sm text-gray-600 mb-4">Find out at what age you will achieve financial independence based on your current savings, investments, and planned expenses.</p>
+                <form id="calculator1" class="space-y-4">
+                    <div>
+                        <label for="currentAge1" class="block text-sm font-medium text-gray-700">Current age:</label>
+                        <input type="number" id="currentAge1" value="30" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="expectedRetirementExpenses1" class="block text-sm font-medium text-gray-700">Expected monthly expenses in retirement:</label>
+                        <input type="number" id="expectedRetirementExpenses1" value="30000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="currentSavings1" class="block text-sm font-medium text-gray-700">Current value of savings and investments:</label>
+                        <input type="number" id="currentSavings1" value="500000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="monthlyInvestment1" class="block text-sm font-medium text-gray-700">Monthly amount to invest:</label>
+                        <input type="number" id="monthlyInvestment1" value="15000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="annualReturn1" class="block text-sm font-medium text-gray-700">Expected annual rate of return (%):</label>
+                        <input type="number" id="annualReturn1" step="0.1" value="7" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="annualInflation1" class="block text-sm font-medium text-gray-700">Expected annual inflation rate (%):</label>
+                        <input type="number" id="annualInflation1" step="0.1" value="2" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="applyInflationToExpenses1" checked class="rounded text-indigo-600 focus:ring-indigo-500">
+                        <label for="applyInflationToExpenses1" class="text-sm text-gray-700">Increase expected monthly expenses in retirement by inflation</label>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="applyInflationToInvestments1" class="rounded text-indigo-600 focus:ring-indigo-500">
+                        <label for="applyInflationToInvestments1" class="text-sm text-gray-700">Increase investments by inflation rate</label>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate</button>
+                </form>
+                <div id="result1" class="mt-4 bg-white rounded-lg shadow-md p-6"></div>
+            </div>
+        </div>
+
+        <div class="calculator-container flex-1">
+            <div class="calculator bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-2 text-indigo-700">Required Monthly Investment</h2>
+                <p class="text-sm text-gray-600 mb-4">Calculate how much you need to invest monthly to achieve financial independence at the desired age.</p>
+                <form id="calculator2" class="space-y-4">
+                    <div>
+                        <label for="currentAge2" class="block text-sm font-medium text-gray-700">Current age:</label>
+                        <input type="number" id="currentAge2" value="30" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="targetAge2" class="block text-sm font-medium text-gray-700">Target age for financial independence:</label>
+                        <input type="number" id="targetAge2" value="50" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="futureMonthlyExpenses2" class="block text-sm font-medium text-gray-700">Expected monthly expenses in retirement:</label>
+                        <input type="number" id="futureMonthlyExpenses2" value="30000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="currentSavings2" class="block text-sm font-medium text-gray-700">Current value of savings and investments:</label>
+                        <input type="number" id="currentSavings2" value="500000" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="annualReturn2" class="block text-sm font-medium text-gray-700">Expected annual rate of return (%):</label>
+                        <input type="number" id="annualReturn2" step="0.1" value="7" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div>
+                        <label for="annualInflation2" class="block text-sm font-medium text-gray-700">Expected annual inflation rate (%):</label>
+                        <input type="number" id="annualInflation2" step="0.1" value="2" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    </div>
+                    <div class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="applyInflationToExpenses2" checked class="rounded text-indigo-600 focus:ring-indigo-500">
+                        <label for="applyInflationToExpenses2" class="text-sm text-gray-700">Increase expected monthly expenses in retirement by inflation</label>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="applyInflationToInvestments2" class="rounded text-indigo-600 focus:ring-indigo-500">
+                        <label for="applyInflationToInvestments2" class="text-sm text-gray-700">Increase investments by inflation rate</label>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate</button>
+                </form>
+                <div id="result2" class="mt-4 bg-white rounded-lg shadow-md p-6"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/calculator1.js"></script>
+    <script src="scripts/calculator2.js"></script>
+</body>
+</html>

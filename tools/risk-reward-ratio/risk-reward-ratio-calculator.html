@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk-Reward Ratio Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-semibold text-blue-600">ValueLayers</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/index.html#tools" class="text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8 max-w-2xl">
+        <h1 class="text-3xl font-bold mb-6 text-center">Risk-Reward Ratio Calculator</h1>
+        
+        <div class="bg-white shadow-md rounded px-8 py-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">About the Calculator</h2>
+            
+            <h3 class="font-bold mt-4 mb-2">Purpose:</h3>
+            <p class="mb-4">Helps investors evaluate the potential risk and reward of a trading opportunity.</p>
+            
+            <h3 class="font-bold mt-4 mb-2">Usage:</h3>
+            <p class="mb-4">Enter the stock purchase price, expected profit price, and the price at which you would accept a loss.</p>
+            
+            <h3 class="font-bold mt-4 mb-2">Output:</h3>
+            <p class="mb-4">The calculator computes the risk-reward ratio in a 1:X format, where X represents the potential profit in relation to the potential loss.</p>
+            
+            <h3 class="font-bold mt-4 mb-2">Interpretation:</h3>
+            <p class="mb-4">The higher the value of X, the more attractive the trading opportunity is in terms of risk-reward ratio.</p>
+        </div>
+
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="purchasePrice">
+                    Stock Purchase Price:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="purchasePrice" type="number" step="0.01" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="profitPrice">
+                    Expected Profit Price:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="profitPrice" type="number" step="0.01" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lossPrice">
+                    Loss Acceptance Price:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lossPrice" type="number" step="0.01" required>
+            </div>
+            <div class="flex items-center justify-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="calculateRatio()">
+                    Calculate Ratio
+                </button>
+            </div>
+        </div>
+        <div id="result" class="bg-white shadow-md rounded px-8 py-6 hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

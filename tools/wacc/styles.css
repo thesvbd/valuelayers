@@ -1,0 +1,39 @@
+/* Zde můžete přidat vlastní CSS styly, pokud budou potřeba */
+body {
+    font-family: Arial, sans-serif;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+/* Přidejte tento kód do vašeho existujícího styles.css souboru */
+
+#slider {
+    touch-action: none;
+}
+
+#sliderHandle {
+    transition: left 0.1s ease-out;
+}
+
+#sliderFill {
+    transition: width 0.1s ease-out;
+}
+
+.noUi-connect {
+    background: #93c5fd;
+}
+
+.noUi-handle {
+    border: 1px solid #3b82f6;
+    background: #3b82f6;
+    box-shadow: none;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+}

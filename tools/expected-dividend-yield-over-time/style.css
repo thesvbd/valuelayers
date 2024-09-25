@@ -1,0 +1,61 @@
+/* Přidáme vlastní styly, pokud je potřeba */
+.hidden {
+    display: none; /* Skryje element */
+}
+
+@media (min-width: 768px) {
+    .flex-wrap > .table-container,
+    .flex-wrap > .chart-container {
+        flex: 1 1 45%; /* Flexibilní šířka pro kontejnery */
+        margin: 0 1%; /* Okraje mezi kontejnery */
+    }
+}
+
+.chart-container {
+    max-width: 45%; /* Maximální šířka pro graf */
+    margin: 0 1%; /* Okraje kolem grafu */
+}
+
+/* Nové styly pro tabulky */
+table {
+    width: 100%; /* Tabulka zabere celou šířku kontejneru */
+    border-collapse: collapse; /* Sjednotí okraje buněk */
+    margin-bottom: 1rem; /* Spodní okraj tabulky */
+    background-color: #fff; /* Barva pozadí tabulky */
+    border: 1px solid #e2e8f0; /* Okraj tabulky */
+    text-align: left; /* Zarovnání textu vlevo */
+}
+
+th, td {
+    padding: 0.75rem; /* Vnitřní okraje buněk */
+    border-bottom: 1px solid #e2e8f0; /* Spodní okraj buněk */
+}
+
+thead {
+    background-color: #f7fafc; /* Barva pozadí hlavičky tabulky */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7fafc; /* Barva pozadí sudých řádků */
+}
+
+tbody tr:hover {
+    background-color: #edf2f7; /* Barva pozadí při najetí myší */
+}
+
+.table-container {
+    overflow-x: auto; /* Povolí horizontální posouvání */
+    margin: 1rem 0; /* Okraje kolem kontejneru */
+}
+
+th {
+    font-weight: bold; /* Tučné písmo pro hlavičky */
+    text-transform: uppercase; /* Velká písmena pro hlavičky */
+    font-size: 0.875rem; /* Velikost písma pro hlavičky */
+    color: #4a5568; /* Barva textu pro hlavičky */
+}
+
+td {
+    font-size: 0.875rem; /* Velikost písma pro buňky */
+    color: #4a5568; /* Barva textu pro buňky */
+}
