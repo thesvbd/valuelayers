@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCA Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-semibold text-blue-600">ValueLayers</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/index.html#tools" class="text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center">DCA Simulator for S&P 500</h1>
+        
+        <div class="mb-8 bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-4">What is DCA?</h2>
+                <p class="mb-4">
+                    Dollar-Cost Averaging (DCA) is an investment strategy where you invest a fixed amount of money at regular intervals, regardless of the asset's price. This approach can help reduce the impact of volatility on your investments.
+                </p>
+                <p class="mb-4">
+                    This simulator uses historical S&P 500 data from 1928 to 2021 to demonstrate how a DCA strategy would have performed over different time periods.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Form -->
+            <div class="lg:w-1/3">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-4">Settings</h2>
+                        <form id="simulation-form" class="space-y-4">
+                            <div>
+                                <label for="initial-investment" class="block text-sm font-medium text-gray-700">Initial Investment (USD)</label>
+                                <input type="number" id="initial-investment" name="initial-investment" value="1000" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                            </div>
+                            <div>
+                                <label for="monthly-investment" class="block text-sm font-medium text-gray-700">Monthly Investment (USD)</label>
+                                <input type="number" id="monthly-investment" name="monthly-investment" value="500" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <div class="font-medium text-gray-700">Period</div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="sp500-5years" name="sp500-period" value="5" checked class="form-radio h-4 w-4 text-blue-600">
+                                    <label for="sp500-5years" class="ml-2 text-sm text-gray-700">Last 5 years</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="sp500-10years" name="sp500-period" value="10" class="form-radio h-4 w-4 text-blue-600">
+                                    <label for="sp500-10years" class="ml-2 text-sm text-gray-700">Last 10 years</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="sp500-15years" name="sp500-period" value="15" class="form-radio h-4 w-4 text-blue-600">
+                                    <label for="sp500-15years" class="ml-2 text-sm text-gray-700">Last 15 years</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="sp500-20years" name="sp500-period" value="20" class="form-radio h-4 w-4 text-blue-600">
+                                    <label for="sp500-20years" class="ml-2 text-sm text-gray-700">Last 20 years</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Run Simulation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and results -->
+            <div class="lg:w-2/3 space-y-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <canvas id="sp500-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <canvas id="investment-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div id="results-table"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimer-modal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                        Disclaimer
+                    </h3>
+                    <div class="mt-2">
+                        <p class="text-sm text-gray-500">
+                            This DCA simulator is for educational purposes only. It may contain errors and should not be used for actual investment decisions. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" id="close-disclaimer" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        I Understand
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
