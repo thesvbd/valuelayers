@@ -19,22 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addCashFlowInput(year) {
         const div = document.createElement('div');
-        div.className = 'flex items-center space-x-2';
+        div.className = 'flex items-center space-x-2 mb-4';
         div.innerHTML = `
             <div class="flex-grow">
-                <label for="cf-year-${year}" class="block text-sm font-medium text-gray-700 flex items-center" data-modal-text="Expected cash flow for this year in millions. Cash flow is the difference between a company's income and expenses. You can estimate these values based on historical data from the Cash Flow Statement and the company's expected growth.">
-                    Cash Flow Year ${year} (in millions&nbsp;<span class="currency-span">${currencySelect.value}</span>)
+                <label for="cf-year-${year}" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2 flex items-center">
+                    Cash Flow Year ${year} (in millions):
                     <span class="ml-1 modal-trigger cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-400">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                         </svg>
                     </span>
                 </label>
-                <input type="number" id="cf-year-${year}" name="cf-year-${year}" placeholder="e.g. 100" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <input type="number" id="cf-year-${year}" name="cf-year-${year}" placeholder="e.g. 100" class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600" required>
             </div>
         `;
         cashFlowsInputs.appendChild(div);
-        updateCurrency(); // Added: update currency after adding new input
 
         // Add event listener for newly created modal trigger
         const newModalTrigger = div.querySelector('.modal-trigger');

@@ -38,15 +38,16 @@ document.getElementById('waccForm').addEventListener('submit', function(e) {
     
     const resultElement = document.getElementById('result');
     resultElement.innerHTML = `
-        <p class="text-xl font-bold mb-2">WACC: ${(wacc * 100).toFixed(2)}%</p>
-        <p class="text-sm text-gray-600">
+        <p class="text-xl font-bold mb-2 text-gray-800 dark:text-neutral-200">WACC: ${(wacc * 100).toFixed(2)}%</p>
+        <p class="text-sm text-gray-600 dark:text-neutral-400 mb-2">
             The Weighted Average Cost of Capital (WACC) of ${(wacc * 100).toFixed(2)}% represents the minimum required return for the company's investment projects.
         </p>
-        <p class="text-sm text-gray-600 mt-2">
+        <p class="text-sm text-gray-600 dark:text-neutral-400 mb-2">
             Projects with a return lower than ${(wacc * 100).toFixed(2)}% should not be implemented as they would destroy company value. For example, a project with a return of ${(wacc * 100 - 1.9).toFixed(2)}% would mean a loss of 1.9% on each dollar invested.
         </p>
-        <p class="text-sm text-gray-600 mt-2">
+        <p class="text-sm text-gray-600 dark:text-neutral-400">
             Conversely, projects with a return higher than ${(wacc * 100).toFixed(2)}% create value for the company. For example, a project with a return of ${(wacc * 100 + 10).toFixed(2)}% would generate a profit of 10 cents for every dollar invested.
         </p>
     `;
+    resultElement.classList.remove('hidden');
 });

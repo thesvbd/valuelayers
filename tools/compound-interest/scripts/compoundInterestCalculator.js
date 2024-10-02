@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const result = calculateCompoundInterest(initialInvestment, monthlyContribution, annualReturn, years, adjustForInflation, inflationRate);
 
         resultDiv.innerHTML = `
-            <p class="mb-1">Final investment value: <strong>${Math.round(result.finalValue).toLocaleString('en-US')} CZK</strong></p>
-            <p class="mb-1">Invested amount: <strong>${Math.round(result.totalContributions).toLocaleString('en-US')} CZK</strong></p>
-            <p class="mb-1">Total earnings: <strong>${Math.round(result.totalEarnings).toLocaleString('en-US')} CZK</strong></p>
-            <p>Inflation-adjusted investment value: <strong>${Math.round(result.inflationAdjustedValue).toLocaleString('en-US')} CZK</strong></p>
+            <p class="mb-1">Final investment value: <strong>${Math.round(result.finalValue).toLocaleString('en-US')}</strong></p>
+            <p class="mb-1">Invested amount: <strong>${Math.round(result.totalContributions).toLocaleString('en-US')}</strong></p>
+            <p class="mb-1">Total earnings: <strong>${Math.round(result.totalEarnings).toLocaleString('en-US')}</strong></p>
+            <p>Inflation-adjusted investment value: <strong>${Math.round(result.inflationAdjustedValue).toLocaleString('en-US')}</strong></p>
         `;
 
         explanationDiv.innerHTML = `
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         beginAtZero: true,
                         ticks: {
                             callback: function(value) {
-                                return Math.round(value).toLocaleString('en-US') + ' CZK';
+                                return Math.round(value).toLocaleString('en-US');
                             }
                         }
                     }
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     label += ': ';
                                 }
                                 if (context.parsed.y !== null) {
-                                    label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CZK', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(Math.round(context.parsed.y));
+                                    label += new Intl.NumberFormat('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(Math.round(context.parsed.y));
                                 }
                                 return label;
                             }

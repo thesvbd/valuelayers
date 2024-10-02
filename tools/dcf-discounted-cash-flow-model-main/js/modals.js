@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display the initial modal window
     const disclaimerText = `
-        <p><strong>[EN]</strong></p>
-        <p>⚠️ Disclaimer: This is an experimental project and may contain errors. Do not make any investment decisions based on this tool.</p>
+        <p>This DCF model is for educational purposes only. It may contain errors and should not be used for actual investment decisions. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.</p>
     `;
-    openModal('Disclaimer', disclaimerText, 'Understood');
+    openModal('Disclaimer', disclaimerText, 'I Understand');
 });
