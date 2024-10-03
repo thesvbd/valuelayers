@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
 
     <!-- ========== MAIN CONTENT ========== -->
@@ -253,7 +253,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
         <!-- End FAQ -->
 
         <!-- DRIP Calculator Section -->
-        <div class="bg-gray-100 dark:bg-neutral-800 py-10 rounded-xl">
+        <div class="bg-gray-200 dark:bg-neutral-800 py-10 rounded-xl">
             <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
                 <div class="flex flex-col lg:flex-row gap-8">
                     <!-- Calculator Form -->
@@ -342,11 +342,11 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                     <!--Results-->
                     <div class="lg:w-1/2">
-                        <div id="result" class="bg-white rounded-lg shadow-md p-4 md:p-6 mb-6">
-                            <h2 class="text-xl font-bold mb-4">Results</h2>
-                            <div id="resultContent"></div>
+                        <div id="result" class="bg-white rounded-lg shadow-md p-4 md:p-6 mb-6 dark:bg-neutral-900">
+                            <h2 class="text-xl font-bold mb-4 dark:text-neutral-200">Results</h2>
+                            <div id="resultContent" class="dark:text-neutral-300"></div>
                         </div>
-                        <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
+                        <div class="bg-white rounded-lg shadow-md p-4 md:p-6 dark:bg-neutral-900">
                             <canvas id="dripChart"></canvas>
                         </div>
                     </div>
@@ -405,7 +405,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
                         </svg>
                     </a>
                 </div>
-                End Social Brands -->
+                <!-- End Social Brands -->
             </div>
             <!-- End Grid -->
         </footer>

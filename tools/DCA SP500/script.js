@@ -119,33 +119,33 @@ function updateResultsTable(prices, initialInvestment, monthlyInvestment, finalI
     const roi = (profit / totalInvested) * 100;
 
     const html = `
-        <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead class="bg-gray-50 dark:bg-gray-800">
                 <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Metric</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Value</th>
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
+            <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">Initial Investment</td>
-                    <td class="px-6 py-4 whitespace-nowrap">$${initialInvestment.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Initial Investment</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">$${initialInvestment.toFixed(2)}</td>
                 </tr>
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">Total Invested</td>
-                    <td class="px-6 py-4 whitespace-nowrap">$${totalInvested.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Total Invested</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">$${totalInvested.toFixed(2)}</td>
                 </tr>
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">Final Value</td>
-                    <td class="px-6 py-4 whitespace-nowrap">$${finalInvestmentValue.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Final Value</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">$${finalInvestmentValue.toFixed(2)}</td>
                 </tr>
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">Profit/Loss</td>
-                    <td class="px-6 py-4 whitespace-nowrap">$${profit.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Profit/Loss</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">$${profit.toFixed(2)}</td>
                 </tr>
                 <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">ROI</td>
-                    <td class="px-6 py-4 whitespace-nowrap">${roi.toFixed(2)}%</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">ROI</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">${roi.toFixed(2)}%</td>
                 </tr>
             </tbody>
         </table>

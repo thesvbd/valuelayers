@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         modalClose.textContent = closeButtonText;
         modalOverlay.classList.remove('hidden');
         modalOverlay.style.display = 'flex';
+        
+        // Add dark mode classes
+        modalContent.classList.add('dark:bg-gray-800');
+        modalTitle.classList.add('dark:text-white');
+        modalText.classList.add('dark:text-gray-300');
+        modalClose.classList.add('dark:bg-gray-700', 'dark:hover:bg-gray-600', 'dark:focus:ring-offset-gray-800');
     }
 
     function closeModal() {
@@ -53,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display the initial modal window
     const disclaimerText = `
-        <p>This DCF model is for educational purposes only. It may contain errors and should not be used for actual investment decisions. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.</p>
+        <p class="dark:text-gray-300">This DCF model is for educational purposes only. It may contain errors and should not be used for actual investment decisions. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.</p>
     `;
     openModal('Disclaimer', disclaimerText, 'I Understand');
 });
