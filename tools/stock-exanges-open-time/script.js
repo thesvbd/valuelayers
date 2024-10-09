@@ -19,7 +19,8 @@ createApp({
             { name: 'Tokyo - TSE', openUTC: 23, closeUTC: 5, color: '#ED8936' },
             { name: 'Hong Kong - HKEX', openUTC: 0, closeUTC: 7, color: '#9F7AEA' },
             { name: 'Sydney - ASX', openUTC: 21, closeUTC: 5, color: '#F56565' },
-            { name: 'Frankfurt - XETRA', openUTC: 6, closeUTC: 14, color: '#ECC94B' }
+            { name: 'Frankfurt - XETRA', openUTC: 6, closeUTC: 14, color: '#ECC94B' },
+            { name: 'Toronto - TSX', openUTC: 13.5, closeUTC: 20, color: '#38B2AC' } // Přidáno Toronto Stock Exchange
         ];
 
         // Funkce pro převod UTC času na místní čas
