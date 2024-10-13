@@ -4,24 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest Calculator</title>
+    <title>CAGR Calculator - Compound Annual Growth Rate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
-    <!-- ========== NEW CONTENT ========== -->
+    <!-- ========== MAIN CONTENT ========== -->
     <!-- Breadcrumb -->
     <div
         class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 lg:px-8 lg:hidden dark:bg-neutral-800 dark:border-neutral-700">
         <div class="flex items-center py-2">
             <!-- Logo -->
-            <a class="flex-none text-xl font-semibold text-black dark:text-white" href="https://valuelayers.com"
+            <a class="flex-none text-xl font-semibold text-black dark:text-white" href="/index.html"
                 aria-label="Brand">Valuelayers</a>
-            <svg class="shrink-0 mx-3 overflow-visible size-2.5 text-gray-400 dark:text-neutral-500" width="16"
-                height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="shrink-0 mx-3 overflow-visible size-2.5 text-gray-400 dark:text-neutral-500"
+                width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
@@ -29,7 +28,7 @@
 
             <!-- Breadcrumb -->
             <ol class="ms-3 flex items-center whitespace-nowrap">
-                <a href="https://valuelayers.com">
+                <a href="/">
                     <li class="flex items-center text-sm text-gray-800 dark:text-neutral-400">
                         Tools
                         <svg class="shrink-0 mx-3 overflow-visible size-2.5 text-gray-400 dark:text-neutral-500"
@@ -40,7 +39,7 @@
                     </li>
                 </a>
                 <li class="text-sm font-semibold text-gray-800 truncate dark:text-neutral-400" aria-current="page">
-                    Compound Interest Calculator
+                    CAGR Calculator
                 </li>
             </ol>
             <!-- End Breadcrumb -->
@@ -63,7 +62,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
         <div class="relative flex flex-col h-full max-h-full">
             <div class="px-6 pt-4">
                 <!-- Logo -->
-                <a class="flex-none text-xl font-semibold text-black dark:text-white" href="https://valuelayers.com"
+                <a class="flex-none text-xl font-semibold text-black dark:text-white" href="/index.html"
                     aria-label="Brand">Valuelayers</a>
                 <!-- End Logo -->
             </div>
@@ -153,13 +152,11 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
     <!-- Content -->
     <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
         <!-- your content goes here ... -->
-        <!-- Information Section -->
+        <!-- FAQ -->
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <!-- Title -->
             <div class="max-w-2xl mx-auto mb-10 lg:mb-14">
-                <h1 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
-                    Compound Interest Calculator
-                </h1>
+                <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">CAGR Calculator</h2>
             </div>
             <!-- End Title -->
 
@@ -179,7 +176,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
                                 Purpose
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                This calculator demonstrates the effect of compound interest on investments. It illustrates potential growth of funds over time, taking into account regular contributions and the impact of inflation.
+                                The CAGR Calculator helps you determine the compound annual growth rate of an investment over a specified period.
                             </p>
                         </div>
                     </div>
@@ -197,10 +194,10 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                Functionality
+                                Usage
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                The calculator requires input of initial investment, monthly contributions, expected return rate, investment duration, and inflation rate. An option to adjust contributions for inflation is available. Upon calculation, it displays potential investment growth over time.
+                                Enter the initial value, final value, and the number of years. The calculator will compute the CAGR.
                             </p>
                         </div>
                     </div>
@@ -221,7 +218,43 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
                                 Output
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                Results include total investment value, total contributions, and total interest earned. An interactive chart visualizes investment growth over time, distinguishing between contributions and compound interest earned.
+                                The CAGR Calculator provides:
+                            </p>
+                            <ul class="mt-2 list-disc list-inside text-gray-500 dark:text-neutral-500">
+                                <li>CAGR: Annual growth rate as a percentage</li>
+                                <li>Total Growth: Overall percentage increase</li>
+                                <li>Absolute Growth: Monetary increase over the period</li>
+                                <li>Annualized Return: CAGR compared to simple annual interest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-8 first:pt-0 last:pb-0">
+                    <div class="flex gap-x-5">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <path d="M12 17h.01" />
+                        </svg>
+
+                        <div class="grow">
+                            <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
+                                Interpretation
+                            </h3>
+                            <p class="mt-1 text-gray-500 dark:text-neutral-500">
+                                Understanding the CAGR result:
+                            </p>
+                            <ul class="mt-2 list-disc list-inside text-gray-500 dark:text-neutral-500">
+                                <li>CAGR shows average annual growth rate</li>
+                                <li>Higher CAGR indicates better performance</li>
+                                <li>Useful for comparing investments with different durations</li>
+                                <li>Doesn't show year-to-year fluctuations</li>
+                            </ul>
+                            <p class="mt-2 text-gray-500 dark:text-neutral-500">
+                                Use CAGR with other financial metrics for a complete investment picture.
                             </p>
                         </div>
                     </div>
@@ -239,121 +272,89 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                Application
+                                Formula
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                The projections can be used for setting financial goals, understanding the impact of various saving strategies, and observing how changes in contributions or return rates affect long-term wealth accumulation. It's important to note that these are estimates based on input parameters and do not guarantee future results.
+                                The CAGR is calculated using the following formula:
+                            </p>
+                            <div class="mt-2 p-2 bg-gray-100 dark:bg-neutral-800 rounded-lg">
+                                <p class="text-center font-mono text-sm">
+                                    CAGR = (Final Value / Initial Value)^(1/n) - 1
+                                </p>
+                            </div>
+                            <p class="mt-2 text-gray-500 dark:text-neutral-500">
+                                Where 'n' is the number of years. The result is typically expressed as a percentage.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Information Section -->
+        <!-- End FAQ -->
 
-        <!-- ========== NEW CONTENT ========== -->
-        <!-- Compound Interest Calculator Section -->
-        <div class="bg-gray-200 dark:bg-neutral-800 py-10 rounded-xl">
-            <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <!-- Calculator Form -->
-                    <div class="lg:w-1/2 bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-900">
-                        <div class="text-center mb-8">
-                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
-                                Compound Interest Calculator
-                            </h2>
-                            <p class="text-sm text-gray-600 dark:text-neutral-400">
-                                Calculate the growth of your investment over time
-                            </p>
-                        </div>
-
-                        <form id="compoundInterestCalculator" class="space-y-4">
-                            <div class="mb-4">
-                                <label for="initialInvestment"
-                                    class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                    Initial Investment:
-                                </label>
-                                <input type="number" id="initialInvestment" value="10000" required
-                                    class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="monthlyContribution"
-                                    class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                    Monthly Contribution:
-                                </label>
-                                <input type="number" id="monthlyContribution" value="1000" required
-                                    class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
-                            </div>
-
-                            <div class="flex items-center mb-4">
-                                <input type="checkbox" id="adjustForInflation" class="mr-2">
-                                <label for="adjustForInflation"
-                                    class="text-sm font-medium text-gray-700 dark:text-neutral-200">
-                                    Annually increase monthly contribution by inflation
-                                </label>
-                            </div>
-                            <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1 ml-6 mb-4">
-                                Increases the monthly contribution by inflation at the beginning of each year (except
-                                the first).
-                            </p>
-
-                            <div class="mb-4">
-                                <label for="annualReturn"
-                                    class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                    Annual Return (%):
-                                </label>
-                                <input type="number" id="annualReturn" step="0.1" value="7" required
-                                    class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="years"
-                                    class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                    Number of Years:
-                                </label>
-                                <input type="number" id="years" value="10" required
-                                    class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
-                            </div>
-
-                            <div class="mb-6">
-                                <label for="inflationRate"
-                                    class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                    Annual Inflation Rate (%):
-                                </label>
-                                <input type="number" id="inflationRate" step="0.1" value="3" required
-                                    class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
-                            </div>
-
-                            <div class="flex justify-center">
-                                <button type="submit"
-                                    class="py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-                                    Calculate
-                                </button>
-                            </div>
-                        </form>
+        <!-- CAGR Calculator Section -->
+        <div class="bg-gray-100 dark:bg-neutral-800 py-10 rounded-xl">
+            <div class="max-w-2xl px-4 sm:px-6 lg:px-8 mx-auto">
+                <!-- Card -->
+                <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-900">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
+                            CAGR Calculator
+                        </h2>
+                        <p class="text-sm text-gray-600 dark:text-neutral-400">
+                            Calculate the Compound Annual Growth Rate of your investment
+                        </p>
                     </div>
-                    <!-- End Calculator Form -->
 
-                    <!-- Chart Card -->
-                    <div class="lg:w-1/2 bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-900">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-200 mb-4">Investment Growth
-                            Chart</h3>
-                        <div class="h-64 md:h-96">
-                            <canvas id="investmentChart" class="w-full h-full"></canvas>
-                        </div>
-                        <!-- Result Section -->
-                        <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg dark:bg-neutral-800 hidden">
-                            <!-- Result will be displayed here -->
+                    <form>
+                        <!-- Initial Value -->
+                        <div class="mb-4">
+                            <label for="initialValue"
+                                class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Initial Value:
+                            </label>
+                            <input id="initialValue" type="number" step="0.01" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
                         </div>
 
-                        <div id="explanation" class="mt-4 text-sm text-gray-600 dark:text-neutral-400"></div>
+                        <!-- Final Value -->
+                        <div class="mb-4">
+                            <label for="finalValue"
+                                class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Final Value:
+                            </label>
+                            <input id="finalValue" type="number" step="0.01" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
+                        </div>
+
+                        <!-- Number of Years -->
+                        <div class="mb-6">
+                            <label for="years"
+                                class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Number of Years:
+                            </label>
+                            <input id="years" type="number" step="1" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
+                        </div>
+
+                        <!-- Calculate Button -->
+                        <div class="flex justify-center">
+                            <button type="button" onclick="calculateCAGR()"
+                                class="py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
+                                Calculate CAGR
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Section -->
+                    <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg dark:bg-neutral-800 hidden">
+                        <!-- Result will be displayed here -->
                     </div>
-                    <!-- End Chart -->
                 </div>
+                <!-- End Card -->
             </div>
         </div>
-        <!-- End Compound Interest Calculator Section -->
+        <!-- End CAGR Calculator Section -->
         <!-- ========== FOOTER ========== -->
         <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
             <!-- Grid -->
@@ -414,7 +415,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
     <!-- End Content -->
     <!-- ========== END MAIN CONTENT ========== -->
 
-    <script src="scripts/compoundInterestCalculator.js"></script>
+    <script src="cagr.js"></script>
 </body>
 
 </html>
