@@ -13,14 +13,14 @@ createApp({
 
         // Definice burz s časy v UTC
         const allExchanges = [
-            { name: 'New York - NYSE', openUTC: 13, closeUTC: 20, color: '#4299E1' },
-            { name: 'New York - NASDAQ', openUTC: 13, closeUTC: 20, color: '#4299E1' },
-            { name: 'London - LSE', openUTC: 7, closeUTC: 15.5, color: '#48BB78' },
+            { name: 'New York - NYSE', openUTC: 12.5, closeUTC: 19, color: '#4299E1' },
+            { name: 'New York - NASDAQ', openUTC: 12.5, closeUTC: 19.02, color: '#4299E1' },
+            { name: 'London - LSE', openUTC: 6, closeUTC: 14.5, color: '#48BB78' },
             { name: 'Tokyo - TSE', openUTC: 23, closeUTC: 5, color: '#ED8936' },
-            { name: 'Hong Kong - HKEX', openUTC: 0, closeUTC: 7, color: '#9F7AEA' },
-            { name: 'Sydney - ASX', openUTC: 21, closeUTC: 5, color: '#F56565' },
-            { name: 'Frankfurt - XETRA', openUTC: 6, closeUTC: 14, color: '#ECC94B' },
-            { name: 'Toronto - TSX', openUTC: 13.5, closeUTC: 20, color: '#38B2AC' } // Přidáno Toronto Stock Exchange
+            { name: 'Hong Kong - HKEX', openUTC: 0.5, closeUTC: 7, color: '#9F7AEA' },
+            { name: 'Sydney - ASX', openUTC: 22, closeUTC: 4, color: '#F56565' },
+            { name: 'Frankfurt - XETRA', openUTC: 6, closeUTC: 14.5, color: '#ECC94B' },
+            { name: 'Toronto - TSX', openUTC: 12.5, closeUTC: 19, color: '#38B2AC' } // Přidáno Toronto Stock Exchange
         ];
 
         // Funkce pro převod UTC času na místní čas
