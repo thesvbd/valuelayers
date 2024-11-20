@@ -17,7 +17,7 @@ document.getElementById('calculator2').addEventListener('submit', function(e) {
     let tableHTML = '<h3 class="text-lg font-semibold mt-6 mb-2">Savings Progress</h3>';
     tableHTML += '<div class="overflow-x-auto"><table class="w-full mt-2 border-collapse border border-gray-300 text-sm"><thead><tr><th class="border border-gray-300 p-1 bg-gray-100">Year</th><th class="border border-gray-300 p-1 bg-gray-100">Age</th><th class="border border-gray-300 p-1 bg-gray-100">Savings</th><th class="border border-gray-300 p-1 bg-gray-100">Annual Investment</th></tr></thead><tbody>';
     result.yearlyData.forEach((data, index) => {
-        tableHTML += `<tr><td class="border border-gray-300 p-1">${index + 1}</td><td class="border border-gray-300 p-1">${data.age}</td><td class="border border-gray-300 p-1">$${Math.round(data.savings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">$${Math.round(data.annualInvestment).toLocaleString('en-US')}</td></tr>`;
+        tableHTML += `<tr><td class="border border-gray-300 p-1">${index + 1}</td><td class="border border-gray-300 p-1">${data.age}</td><td class="border border-gray-300 p-1">${Math.round(data.savings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">${Math.round(data.annualInvestment).toLocaleString('en-US')}</td></tr>`;
     });
     tableHTML += '</tbody></table></div>';
 
@@ -28,7 +28,7 @@ document.getElementById('calculator2').addEventListener('submit', function(e) {
     let retirementExpenses = result.yearlyData[result.yearlyData.length - 1].annualExpenses;
     
     for (let age = targetAge; age <= 100; age++) {
-        tableHTML += `<tr><td class="border border-gray-300 p-1">${age}</td><td class="border border-gray-300 p-1">$${Math.round(retirementSavings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">$${Math.round(retirementExpenses).toLocaleString('en-US')}</td></tr>`;
+        tableHTML += `<tr><td class="border border-gray-300 p-1">${age}</td><td class="border border-gray-300 p-1">${Math.round(retirementSavings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">${Math.round(retirementExpenses).toLocaleString('en-US')}</td></tr>`;
         retirementSavings = retirementSavings * (1 + annualReturn) - retirementExpenses;
         if (applyInflationToExpenses) {
             retirementExpenses *= (1 + annualInflation);
@@ -37,13 +37,13 @@ document.getElementById('calculator2').addEventListener('submit', function(e) {
     tableHTML += '</tbody></table></div>';
 
     let investmentText = applyInflationToInvestments
-        ? `you need to start investing with a monthly amount of <span class="font-bold text-indigo-600">$${Math.ceil(result.monthlyInvestment).toLocaleString('en-US')}</span>, which will increase annually with inflation`
-        : `you need to invest <span class="font-bold text-indigo-600">$${Math.ceil(result.monthlyInvestment).toLocaleString('en-US')}</span> monthly`;
+        ? `you need to start investing with a monthly amount of <span class="font-bold text-indigo-600">${Math.ceil(result.monthlyInvestment).toLocaleString('en-US')}</span>, which will increase annually with inflation`
+        : `you need to invest <span class="font-bold text-indigo-600">${Math.ceil(result.monthlyInvestment).toLocaleString('en-US')}</span> monthly`;
 
     document.getElementById('result2').innerHTML = `
         <div class="space-y-4 text-sm">
             <p class="font-medium">To achieve financial independence at age ${targetAge}, ${investmentText}.</p>
-            <p class="font-medium">Total target amount to accumulate by age ${targetAge}: <span class="font-bold text-indigo-600">$${Math.round(result.requiredAmount).toLocaleString('en-US')}</span></p>
+            <p class="font-medium">Total target amount to accumulate by age ${targetAge}: <span class="font-bold text-indigo-600">${Math.round(result.requiredAmount).toLocaleString('en-US')}</span></p>
             <p class="text-xs italic text-gray-600">This calculation uses the 4% rule, which assumes you can safely withdraw 4% of your portfolio annually without running out of savings. This rule is widely used in the FIRE (Financial Independence, Retire Early) community for long-term financial independence planning.</p>
         </div>
         <div class="mt-6">

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let tableHTML = '<h3 class="text-lg font-semibold mt-6 mb-2">Savings Progress</h3>';
         tableHTML += '<div class="overflow-x-auto"><table class="w-full mt-2 border-collapse border border-gray-300 text-sm"><thead><tr><th class="border border-gray-300 p-1 bg-gray-100">Year</th><th class="border border-gray-300 p-1 bg-gray-100">Age</th><th class="border border-gray-300 p-1 bg-gray-100">Savings</th><th class="border border-gray-300 p-1 bg-gray-100">Annual Investment</th></tr></thead><tbody>';
         result.yearlyData.forEach((data, index) => {
-            tableHTML += `<tr><td class="border border-gray-300 p-1">${index + 1}</td><td class="border border-gray-300 p-1">${data.age}</td><td class="border border-gray-300 p-1">$${Math.round(data.savings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">$${Math.round(data.annualInvestment).toLocaleString('en-US')}</td></tr>`;
+            tableHTML += `<tr><td class="border border-gray-300 p-1">${index + 1}</td><td class="border border-gray-300 p-1">${data.age}</td><td class="border border-gray-300 p-1">${Math.round(data.savings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">${Math.round(data.annualInvestment).toLocaleString('en-US')}</td></tr>`;
         });
         tableHTML += '</tbody></table></div>';
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let retirementExpenses = result.yearlyData[result.yearlyData.length - 1].annualExpenses;
         
         for (let age = result.age; age <= 100; age++) {
-            tableHTML += `<tr><td class="border border-gray-300 p-1">${age}</td><td class="border border-gray-300 p-1">$${Math.round(retirementSavings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">$${Math.round(retirementExpenses).toLocaleString('en-US')}</td></tr>`;
+            tableHTML += `<tr><td class="border border-gray-300 p-1">${age}</td><td class="border border-gray-300 p-1">${Math.round(retirementSavings).toLocaleString('en-US')}</td><td class="border border-gray-300 p-1">${Math.round(retirementExpenses).toLocaleString('en-US')}</td></tr>`;
             retirementSavings = retirementSavings * (1 + annualReturn) - retirementExpenses;
             if (applyInflationToExpenses) {
                 retirementExpenses *= (1 + annualInflation);
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('result1').innerHTML = `
             <div class="space-y-4 text-sm">
                 <p class="font-medium">You will achieve financial independence at age: <span class="font-bold text-indigo-600">${result.age}</span></p>
-                <p class="font-medium">Target amount to accumulate: <span class="font-bold text-indigo-600">$${Math.round(result.requiredAmount).toLocaleString('en-US')}</span></p>
+                <p class="font-medium">Target amount to accumulate: <span class="font-bold text-indigo-600">${Math.round(result.requiredAmount).toLocaleString('en-US')}</span></p>
                 <p class="text-xs italic text-gray-600">The calculation is based on the 4% rule, which assumes you can safely withdraw 4% of your portfolio annually without running out of money. This rule is widely used in the FIRE (Financial Independence, Retire Early) community for long-term financial independence planning.</p>
             </div>
             <div class="mt-6">
