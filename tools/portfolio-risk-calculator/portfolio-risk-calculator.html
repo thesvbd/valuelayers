@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Calculate your company's Weighted Average Cost of Capital (WACC) easily with our user-friendly WACC calculator. Get accurate results in seconds!">
-    <title>WACC Calculator</title>
+    <meta name="description" content="Calculate your risk-reward ratio effortlessly with our user-friendly calculator. Make informed investment decisions and maximize your trading potential.">
+    <title>Risk-Reward Ratio Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
@@ -30,11 +29,19 @@
 
             <!-- Breadcrumb -->
             <ol class="ms-3 flex items-center whitespace-nowrap">
-                <a href="/">
+                <a href="https://valuelayers.com">
                     <li class="flex items-center text-sm text-gray-800 dark:text-neutral-400">
                         Tools
+                        <svg class="shrink-0 mx-3 overflow-visible size-2.5 text-gray-400 dark:text-neutral-500"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </li>
                 </a>
+                <li class="text-sm font-semibold text-gray-800 truncate dark:text-neutral-400" aria-current="page">
+                    Risk-Reward Ratio Calculator
+                </li>
             </ol>
             <!-- End Breadcrumb -->
         </div>
@@ -56,7 +63,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
         <div class="relative flex flex-col h-full max-h-full">
             <div class="px-6 pt-4">
                 <!-- Logo -->
-                <a class="flex-none text-xl font-semibold text-black dark:text-white" href="#"
+                <a class="flex-none text-xl font-semibold text-black dark:text-white" href="https://valuelayers.com"
                     aria-label="Brand">Valuelayers</a>
                 <!-- End Logo -->
             </div>
@@ -84,8 +91,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
                                 href="/tools/wacc/wacc-calculator.html">WACC Calculator</a>
                         </li>
                         <li><a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 dark:text-neutral-200 dark:hover:text-neutral-300"
-                                href="/tools/forward-pe-calculator/forward-pe-calculator.html">Forward P/E
-                                Calculator</a></li>
+                                href="/tools/forward-pe-calculator/forward-pe-calculator.html">Forward P/E Calculator</a></li>
                         <li><a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 dark:text-neutral-200 dark:hover:text-neutral-300"
                                 href="/tools/cagr/cagr.html">CAGR Calculator</a>
                         </li>
@@ -151,20 +157,18 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
     <!-- Content -->
     <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
         <!-- your content goes here ... -->
-        <!-- FAQ -->
+        <!-- Description Section -->
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <!-- Title -->
             <div class="max-w-2xl mx-auto mb-10 lg:mb-14">
-                <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">WACC Calculator</h2>
+                <h1 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Portfolio Risk Calculator</h1>
             </div>
             <!-- End Title -->
 
             <div class="max-w-2xl mx-auto divide-y divide-gray-200 dark:divide-neutral-700">
                 <div class="py-8 first:pt-0 last:pb-0">
                     <div class="flex gap-x-5">
-                        <svg class="flex-shrink-0 mt-1 w-6 h-6 text-gray-500 dark:text-neutral-500"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                             <path d="M12 17h.01" />
@@ -172,13 +176,10 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                What is WACC?
+                                What is Portfolio Risk Management?
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                WACC stands for Weighted Average Cost of Capital. It's a crucial financial metric that
-                                represents the average cost a company incurs to finance its operations and growth using
-                                various sources of capital. WACC takes into account both the cost of equity and the cost
-                                of debt, weighted by their respective proportions in the company's capital structure.
+                                Portfolio risk management is a crucial aspect of successful trading and investing. It helps you determine appropriate position sizes and risk levels for your trades while protecting your overall portfolio value. Proper risk management ensures that no single trade can significantly impact your trading capital.
                             </p>
                         </div>
                     </div>
@@ -186,9 +187,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                 <div class="py-8 first:pt-0 last:pb-0">
                     <div class="flex gap-x-5">
-                        <svg class="flex-shrink-0 mt-1 w-6 h-6 text-gray-500 dark:text-neutral-500"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                             <path d="M12 17h.01" />
@@ -196,27 +195,18 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                Why is WACC important?
+                                How to Use the Calculator
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                WACC is a critical concept in corporate finance for several reasons:
+                                To use this calculator, input your total portfolio value, risk tolerance percentage, intended position size, and stop loss percentage. The calculator will then compute various risk metrics to help you make informed trading decisions and maintain proper risk management.
                             </p>
-                            <ul class="list-disc list-inside mt-2 text-gray-500 dark:text-neutral-500">
-                                <li>It serves as a hurdle rate for evaluating new investment projects.</li>
-                                <li>It's used in discounted cash flow (DCF) analysis for company valuation.</li>
-                                <li>It helps in determining the optimal capital structure for a company.</li>
-                                <li>It provides insights into the minimum return a company must earn on its existing
-                                    assets to satisfy its creditors, owners, and other providers of capital.</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="py-8 first:pt-0 last:pb-0">
                     <div class="flex gap-x-5">
-                        <svg class="flex-shrink-0 mt-1 w-6 h-6 text-gray-500 dark:text-neutral-500"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                             <path d="M12 17h.01" />
@@ -224,27 +214,24 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                WACC formula
+                                Understanding the Results
                             </h3>
-                            <p class="mt-2 font-mono bg-gray-100 dark:bg-neutral-700 p-2 rounded">WACC = (Wd * Rd * (1 -
-                                t)) + (We * Re)</p>
-                            <p class="mt-2 text-gray-500 dark:text-neutral-500">Where:</p>
-                            <ul class="list-disc list-inside mt-2 text-gray-500 dark:text-neutral-500">
-                                <li>Wd = Weight of debt (percentage of financing that is debt)</li>
-                                <li>Rd = Cost of debt (interest rate)</li>
-                                <li>t = Corporate tax rate</li>
-                                <li>We = Weight of equity (percentage of financing that is equity)</li>
-                                <li>Re = Cost of equity (required rate of return for equity investors)</li>
-                            </ul>
+                            <p class="mt-1 text-gray-500 dark:text-neutral-500">
+                                The calculator provides four key metrics:
+                                <ul class="list-disc ml-6 mt-2">
+                                    <li><strong>Maximum Position Risk:</strong> The maximum amount you should risk on a single trade</li>
+                                    <li><strong>Portfolio Risk %:</strong> The percentage of your portfolio at risk for the given position</li>
+                                    <li><strong>Maximum Loss Amount:</strong> The potential loss based on your stop loss level</li>
+                                    <li><strong>Recommended Position Size:</strong> The suggested position size based on your risk parameters</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="py-8 first:pt-0 last:pb-0">
                     <div class="flex gap-x-5">
-                        <svg class="flex-shrink-0 mt-1 w-6 h-6 text-gray-500 dark:text-neutral-500"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                             <path d="M12 17h.01" />
@@ -252,28 +239,24 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                What factors influence WACC?
+                                Risk Management Best Practices
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                Several factors can affect a company's WACC:
+                                Common risk management guidelines suggest:
+                                <ul class="list-disc ml-6 mt-2">
+                                    <li>Never risk more than 1-2% of your total portfolio on a single trade</li>
+                                    <li>Use stop losses to limit potential losses</li>
+                                    <li>Consider your overall risk tolerance when sizing positions</li>
+                                    <li>Maintain consistent position sizing across trades</li>
+                                </ul>
                             </p>
-                            <ul class="list-disc list-inside mt-2 text-gray-500 dark:text-neutral-500">
-                                <li>Capital structure (debt-to-equity ratio)</li>
-                                <li>Market interest rates</li>
-                                <li>Company's credit rating and risk profile</li>
-                                <li>Economic conditions and market volatility</li>
-                                <li>Industry-specific factors</li>
-                                <li>Tax rates and tax policies</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="py-8 first:pt-0 last:pb-0">
                     <div class="flex gap-x-5">
-                        <svg class="flex-shrink-0 mt-1 w-6 h-6 text-gray-500 dark:text-neutral-500"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-1 size-6 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                             <path d="M12 17h.01" />
@@ -281,101 +264,140 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
 
                         <div class="grow">
                             <h3 class="md:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                How to interpret WACC results?
+                                Where can I learn more about portfolio risk management?
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-neutral-500">
-                                Interpreting WACC results involves considering several aspects:
+                                For a deeper understanding of portfolio risk management, we recommend the following resources:
+                                <ul class="list-disc ml-6 mt-2">
+                                    <li><a href="https://www.investopedia.com/articles/trading/09/risk-management.asp" class="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Position Sizing and Risk Management</a> - Comprehensive guide from Investopedia</li>
+                                    <li><a href="https://www.investopedia.com/terms/t/two-percent-rule.asp" class="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">The 2% Rule</a> - Detailed explanation of a popular risk management rule</li>
+                                </ul>
+                                These sources provide verified information and are regularly updated by experts in the field of finance and trading.
                             </p>
-                            <ul class="list-disc list-inside mt-2 text-gray-500 dark:text-neutral-500">
-                                <li>A lower WACC generally indicates that a company can finance its operations more
-                                    cheaply.</li>
-                                <li>WACC should be compared to the company's return on invested capital (ROIC). If ROIC
-                                    > WACC, the company is creating value.</li>
-                                <li>WACC can be used as a discount rate in DCF models for valuation purposes.</li>
-                                <li>Comparing a company's WACC to industry averages can provide insights into its
-                                    competitive position and financial health.</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End FAQ -->
+        <!-- End Description Section -->
 
-        <!-- WACC Calculator Section -->
+        <!-- Portfolio Risk Calculator Section -->
         <div class="bg-gray-200 dark:bg-neutral-800 py-10 rounded-xl">
             <div class="max-w-2xl px-4 sm:px-6 lg:px-8 mx-auto">
                 <!-- Card -->
                 <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-900">
                     <div class="text-center mb-8">
                         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
-                            WACC Calculator
+                            Portfolio Risk Calculator
                         </h2>
                         <p class="text-sm text-gray-600 dark:text-neutral-400">
-                            Calculate the Weighted Average Cost of Capital
+                            Calculate the risk metrics for your investment portfolio
                         </p>
                     </div>
 
-                    <form id="waccForm">
-                        <!-- Debt to Equity Ratio Slider -->
+                    <form>
+                        <!-- Portfolio Value -->
                         <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                Debt to Equity Ratio:
+                            <label for="portfolioValue" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Total Portfolio Value ($):
                             </label>
-                            <div id="slider" class="mb-4"></div>
-                            <div class="flex justify-between mt-2">
-                                <span id="debtLabel" class="text-sm text-gray-600 dark:text-neutral-400">Debt:
-                                    50%</span>
-                                <span id="equityLabel" class="text-sm text-gray-600 dark:text-neutral-400">Equity:
-                                    50%</span>
-                            </div>
+                            <input id="portfolioValue" type="number" step="0.01" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300">
                         </div>
 
-                        <!-- Required Rate of Return on Debt -->
+                        <!-- Risk Tolerance -->
                         <div class="mb-4">
-                            <label for="rd" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                Required Rate of Return on Debt (%):
+                            <label for="riskTolerance" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Risk Tolerance (%):
                             </label>
-                            <input id="rd" name="rd" type="number" step="0.1" required
-                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
+                            <input id="riskTolerance" type="number" step="0.1" min="0" max="100" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300">
                         </div>
 
-                        <!-- Required Rate of Return on Equity -->
+                        <!-- Position Size -->
                         <div class="mb-4">
-                            <label for="re" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                Required Rate of Return on Equity (%):
+                            <label for="positionSize" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Position Size ($):
                             </label>
-                            <input id="re" name="re" type="number" step="0.1" required
-                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
+                            <input id="positionSize" type="number" step="0.01" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300">
                         </div>
 
-                        <!-- Tax Rate on Debt -->
-                        <div class="mb-6">
-                            <label for="t" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
-                                Tax Rate on Debt (%):
+                        <!-- Stop Loss -->
+                        <div class="mb-4">
+                            <label for="stopLoss" class="block text-sm font-medium text-gray-700 dark:text-neutral-200 mb-2">
+                                Stop Loss (%):
                             </label>
-                            <input id="t" name="t" type="number" step="0.1" value="25" required
-                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300 dark:focus:ring-neutral-600">
+                            <input id="stopLoss" type="number" step="0.1" required
+                                class="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:text-neutral-300">
                         </div>
 
                         <!-- Calculate Button -->
                         <div class="flex justify-center">
-                            <button type="submit"
+                            <button type="button" onclick="calculatePortfolioRisk()"
                                 class="py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-                                Calculate WACC
+                                Calculate Risk Metrics
                             </button>
                         </div>
                     </form>
 
                     <!-- Result Section -->
-                    <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg dark:bg-neutral-800 hidden">
-                        <!-- Result will be displayed here -->
+                    <div id="result" class="mt-6 hidden">
+                        <!-- Disclaimer -->
+                        <div class="mb-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 dark:bg-yellow-800/30 dark:border-yellow-600">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700 dark:text-yellow-200">
+                                        <strong>Disclaimer:</strong> This calculator is for educational purposes only. It does not represent investment advice or recommendations for trading. All investment and trading decisions should be made based on your own judgment or consultation with a licensed financial advisor. Historical results are not a guarantee of future returns. Trading on financial markets is risky and can lead to loss of capital.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Grid -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-neutral-800">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-3 bg-white rounded-lg dark:bg-neutral-700">
+                                    <h4 class="text-sm font-medium text-gray-600 dark:text-neutral-300">Maximum Position Risk</h4>
+                                    <p id="maxPositionRisk" class="text-lg font-bold text-gray-800 dark:text-neutral-100">$0.00</p>
+                                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1">
+                                        = Portfolio Value × Risk Tolerance %
+                                    </p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg dark:bg-neutral-700">
+                                    <h4 class="text-sm font-medium text-gray-600 dark:text-neutral-300">Portfolio Risk %</h4>
+                                    <p id="portfolioRiskPercentage" class="text-lg font-bold text-gray-800 dark:text-neutral-100">0%</p>
+                                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1">
+                                        = (Position Size × Stop Loss %) / Portfolio Value × 100
+                                    </p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg dark:bg-neutral-700">
+                                    <h4 class="text-sm font-medium text-gray-600 dark:text-neutral-300">Maximum Loss Amount</h4>
+                                    <p id="maxLossAmount" class="text-lg font-bold text-gray-800 dark:text-neutral-100">$0.00</p>
+                                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1">
+                                        = Position Size × Stop Loss %
+                                    </p>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg dark:bg-neutral-700">
+                                    <h4 class="text-sm font-medium text-gray-600 dark:text-neutral-300">Recommended Position Size</h4>
+                                    <p id="recommendedPositionSize" class="text-lg font-bold text-gray-800 dark:text-neutral-100">$0.00</p>
+                                    <p class="text-xs text-gray-500 dark:text-neutral-400 mt-1">
+                                        = Maximum Position Risk / Stop Loss %
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- End Card -->
             </div>
         </div>
-        <!-- End WACC Calculator Section -->
+        <!-- End Portfolio Risk Calculator Section -->
         <!-- ========== FOOTER ========== -->
         <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
             <!-- Grid -->
@@ -436,8 +458,7 @@ overflow-y-auto" role="dialog" tabindex="-1" aria-label="Sidebar">
     <!-- End Content -->
     <!-- ========== END MAIN CONTENT ========== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
-    <script src="wacc-calculator.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
