@@ -1,7 +1,7 @@
 > ⚠️ This project was created as a hobby project. The results have not been fully validated and may contain errors. Community help and contributions are highly appreciated.
 
 ![Project homepage](assets/hp.png)
-![ool showcase](calc-showcase.png)
+![Tool showcase](assets/calc-showcase.png)
 
 
 # Valuelayers — simple open source tools for asset valuation
