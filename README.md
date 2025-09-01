@@ -1,9 +1,7 @@
-> ⚠️ This project was created as a hobby project. The results have not been fully validated and may contain errors. Community help and contributions are highly appreciated.
-
 ![Project homepage](assets/hp.png)
 ![Tool showcase](assets/calc-showcase.png)
 
-
+> ⚠️ This project was created as a hobby project. The results have not been fully validated and may contain errors. Community help and contributions are highly appreciated.
 # Valuelayers — simple open source tools for asset valuation
 
 Valuelayers provides practical calculators and tools for investment analysis, personal finance, and risk assessment. The goal is to make the code accessible, encourage community contributions, and build a modular set of tools.
@@ -27,3 +25,5 @@ We welcome bugfix PRs, new calculators, translations, and UX improvements. If yo
 ## Testing and validation of results
 
 Calculations are critical. Each module should include unit tests, example calculations, and at least two cases with control values.
+
+> ⚠️ This project was created as a hobby project. The results have not been fully validated and may contain errors. Community help and contributions are highly appreciated.
